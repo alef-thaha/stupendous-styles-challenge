@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="stupendous_challenge.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:stupendous_challenge"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+
+            <Button  x:Name="donutbutton" Style="{StaticResource mybuttonstyle}" 
+                     Grid.Column="0"  
+                     Click="donutbutton_Click" >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/donut-icon.png" Height="18" Margin="0,0,20,0"/>
+                    <TextBlock Text="Donut" />
+                </StackPanel>
+            </Button>
+            
+            <Button Name="coffeebutton" Style="{StaticResource mybuttonstyle}" 
+                    Grid.Column="1"
+                    Click="coffeebutton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/coffee-icon.png" Height="18" Margin="0,0,20,0"/>
+                    <TextBlock Text="Coffee" />
+                </StackPanel>
+            </Button>
+            
+            <Button x:Name="shedulebutton" Style="{StaticResource mybuttonstyle}" 
+                    Grid.Column="2" 
+                    Click="shedulebutton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/schedule-icon.png" Height="18" Margin="0,0,20,0"/>
+                    <TextBlock Text="Shedule" />
+                </StackPanel>
+            </Button>
+            
+            <Button Name="completebutton" Style="{StaticResource mybuttonstyle}" 
+                    Grid.Column="3" 
+                    Click="completebutton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/complete-icon.png" Height="18" Margin="0,0,20,0"/>
+                    <TextBlock Text="complete" />
+                </StackPanel>
+            </Button>
+            
+        </Grid>
+        
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Frame x:Name="myframe" >
+            </Frame>
+            
+            <Image Source="Assets/background.jpg"  
+                   Stretch="Fill" 
+                   VerticalAlignment="Stretch" 
+                   Grid.Column="1"
+                   Width="800"/>
+
+        </Grid>
+    </Grid>
+</Page>
